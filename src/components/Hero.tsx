@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => (
   <section className="hero">
     <div className="hero-content">
       <h1>Welcome to <GamistanAnimated /></h1>
-      <p>Your modern, beautiful, and accessible React app starter.</p>
+      <p>Gamistan is your modern, beautiful, and accessible playground for web-based games. Enjoy Flappy Bird and more, all in a seamless, minimal, and responsive experience. Dive in and have fun!</p>
       <button className="hero-btn" onClick={onGetStarted} aria-label="Get Started with Flappy Bird Game">
         Get Started
       </button>
