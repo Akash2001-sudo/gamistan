@@ -1,0 +1,74 @@
+.trex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 320px;
+  margin: 2rem 0;
+}
+.trex-game {
+  position: relative;
+  background: linear-gradient(180deg, #f8fafc 80%, #e0e7ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 64, 175, 0.10);
+  overflow: hidden;
+  outline: none;
+}
+.trex-ground {
+  position: absolute;
+  background: #bdbdbd;
+  border-top: 3px solid #888;
+  left: 0;
+}
+.trex {
+  position: absolute;
+  background: url('https://raw.githubusercontent.com/wayou/t-rex-runner/master/images/t-rex.png') no-repeat center/contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #e0e7ff88;
+}
+.trex-obstacle {
+  position: absolute;
+  background: url('https://raw.githubusercontent.com/wayou/t-rex-runner/master/images/cactus1.png') no-repeat center/contain;
+  border-radius: 4px;
+}
+.trex-score {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a5cff;
+  background: rgba(255,255,255,0.7);
+  padding: 2px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #e0e7ff44;
+}
+.trex-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  border-radius: 18px;
+  z-index: 2;
+}
+.trex-overlay button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #1a5cff;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e0e7ff44;
+  transition: background 0.18s;
+}
+.trex-overlay button:hover {
+  background: #1746b0;
+}

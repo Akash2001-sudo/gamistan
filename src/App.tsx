@@ -9,6 +9,7 @@ import SkipToContent from './components/SkipToContent';
 import Seo from './components/Seo';
 import Toast from './components/Toast';
 import FlappyBird from './components/FlappyBird';
+import TRexRunner from './components/TRexRunner';
 import GamesSection from './components/GamesSection';
 import ReleaseNotesDialog from './components/ReleaseNotesDialog';
 
@@ -33,6 +34,8 @@ function App() {
   let mainContent;
   if (activeGame === 'flappy') {
     mainContent = <FlappyBird onExit={() => { setActiveGame(null); setShowGames(true); }} />;
+  } else if (activeGame === 'trex') {
+    mainContent = <TRexRunner onExit={() => { setActiveGame(null); setShowGames(true); }} />;
   } else if (showGames) {
     mainContent = <GamesSection onSelectGame={(game) => setActiveGame(game)} />;
   } else {
