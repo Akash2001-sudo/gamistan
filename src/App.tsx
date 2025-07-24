@@ -19,7 +19,7 @@ function App() {
   const [showReleaseNotes, setShowReleaseNotes] = useState(false);
 
   useEffect(() => {
-    setToast({ message: 'Welcome to the minimal app!', type: 'info' });
+    setToast({ message: 'Welcome to Gamistan!', type: 'info' });
     const timer = setTimeout(() => setToast(null), 2000);
     // Always show release notes on every load
     setShowReleaseNotes(true);

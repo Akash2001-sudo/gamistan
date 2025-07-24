@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     <header className="header">
       <nav className="navbar">
         <div className="logo">
-          <a href="/">MyApp</a>
+          <a href="/">Gamistan!!!</a>
         </div>
         <button
           className="menu-toggle"
