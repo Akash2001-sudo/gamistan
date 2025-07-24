@@ -13,7 +13,7 @@ const notes = [
   'bugfix: Improved interaaction with game controls for flappy bird.',
 ];
 
-const ReleaseNotesDialog: React.FC<ReleaseNotesDialogProps> = ({ open, onClose }) => {
+const ReleaseNotesDialog: React.FC<ReleaseNotesDialogProps> = ({ open }) => {
   if (!open) return null;
   return (
     <div className="release-notes-backdrop">
