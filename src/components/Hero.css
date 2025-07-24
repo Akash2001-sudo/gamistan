@@ -1,0 +1,49 @@
+.hero {
+  background: none;
+  color: inherit;
+  padding: 4rem 0 3rem 0;
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.hero-btn {
+  background: none;
+  color: #4e54c8;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid #4e54c8;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background: #4e54c8;
+  color: #fff;
+}
+.gamistan-animated {
+  display: inline-block;
+  font-style: italic;
+  font-family: 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  background: none;
+  user-select: none;
+  margin-bottom: 0.2em;
+}

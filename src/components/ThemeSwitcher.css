@@ -1,0 +1,37 @@
+.theme-switcher {
+  background: #fff;
+  color: #4e54c8;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, color 0.2s;
+}
+.theme-switcher:hover,
+.theme-switcher:focus {
+  background: #4e54c8;
+  color: #fff;
+}
+
+body[data-theme='dark'] {
+  background: #232526;
+  color: #fff;
+}
+body[data-theme='dark'] .header,
+body[data-theme='dark'] .footer {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+}
+body[data-theme='dark'] .hero {
+  background: linear-gradient(120deg, #232526 0%, #4e54c8 100%);
+}
+body[data-theme='dark'] .nav-link {
+  color: #fff;
+}
+body[data-theme='dark'] .nav-link:hover,
+body[data-theme='dark'] .nav-link:focus {
+  color: #8f94fb;
+}

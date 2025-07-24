@@ -1,0 +1,13 @@
+.about {
+  max-width: 600px;
+  margin: 3rem auto 2rem auto;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about p {
+  font-size: 1.1rem;
+  color: #444;
+}
