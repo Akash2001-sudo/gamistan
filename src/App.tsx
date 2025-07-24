@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './assets/global.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -10,16 +10,24 @@ import Seo from './components/Seo';
 import Toast from './components/Toast';
 import FlappyBird from './components/FlappyBird';
 import GamesSection from './components/GamesSection';
+import ReleaseNotesDialog from './components/ReleaseNotesDialog';
 
 function App() {
   const [activeGame, setActiveGame] = useState<string | null>(null);
   const [showGames, setShowGames] = useState(false);
   const [toast, setToast] = useState<{ message: string; type?: 'success' | 'error' | 'info' } | null>(null);
+  const [showReleaseNotes, setShowReleaseNotes] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setToast({ message: 'Welcome to the minimal app!', type: 'info' });
     const timer = setTimeout(() => setToast(null), 2000);
-    return () => clearTimeout(timer);
+    // Always show release notes on every load
+    setShowReleaseNotes(true);
+    const notesTimer = setTimeout(() => setShowReleaseNotes(false), 5000);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(notesTimer);
+    };
   }, []);
 
   let mainContent;
@@ -47,6 +55,7 @@ function App() {
       </main>
       <Footer />
       {toast && <Toast message={toast.message} type={toast.type} />}
+      <ReleaseNotesDialog open={showReleaseNotes} onClose={() => setShowReleaseNotes(false)} />
     </div>
   );
 }

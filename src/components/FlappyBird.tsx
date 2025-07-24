@@ -5,10 +5,10 @@ import './FlappyBird.css';
 const GAME_WIDTH = 400;
 const GAME_HEIGHT = 600;
 const BIRD_SIZE = 48; // Slightly larger for sprite
-const GRAVITY = 0.28; // Less gravity
-const FLAP = -9.5; // Stronger flap
-const PIPE_WIDTH = 60;
-const PIPE_GAP = 200; // Wider gap
+const GRAVITY = 0.18; // Reduce gravity for slower fall
+const FLAP = -6; // Reduce flap strength for gentler jump
+const PIPE_WIDTH = 40; // Smaller pipes for easier passage
+const PIPE_GAP = 240; // Even wider gap for easier play
 const PIPE_SPEED = 1.2; // Slower pipes
 
 function getRandomPipeY() {

@@ -1,0 +1,63 @@
+.release-notes-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 41, 59, 0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  backdrop-filter: blur(2.5px) saturate(1.2);
+}
+.release-notes-dialog {
+  background: linear-gradient(135deg, #f8fafc 70%, #e0e7ff 100%);
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(30, 64, 175, 0.16), 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2.5rem 2.7rem 2.1rem 2.7rem;
+  min-width: 340px;
+  max-width: 92vw;
+  animation: fadeInScale 0.4s cubic-bezier(.4,1.4,.6,1) both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+.release-notes-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #1a5cff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px #e0e7ff;
+}
+.release-notes-list {
+  font-size: 1.13rem;
+  color: #333;
+  margin: 0;
+  padding-left: 1.2em;
+  list-style: disc inside;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.release-notes-dialog::before {
+  content: '';
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #a5b4fc 0%, #f8fafc 80%);
+  opacity: 0.16;
+  z-index: 0;
+  border-radius: 50%;
+}
+.release-notes-dialog > * {
+  position: relative;
+  z-index: 1;
+}
